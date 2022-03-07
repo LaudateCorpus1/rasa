@@ -32,10 +32,10 @@ jobs:
 
     steps:
     - name: Checkout main
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Checkout dataset
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: ${{ secrets.DATASET_REPOSITORY }}
         token: ${{ secrets.ML_TEST_SA_PAT }}
@@ -142,7 +142,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Download gomplate
         run: |-
@@ -215,10 +215,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Checkout dataset
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: ${{ secrets.DATASET_REPOSITORY }}
           token: ${{ secrets.ML_TEST_SA_PAT }}
@@ -290,7 +290,7 @@ jobs:
           fi
 
       - name: Checkout dataset - external
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         if: steps.set_dataset_config_vars.outputs.is_external == 'true'
         with:
           repository: ${{ env.DATASET }}
@@ -452,10 +452,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Checkout dataset
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: ${{ secrets.DATASET_REPOSITORY }}
           token: ${{ secrets.ML_TEST_SA_PAT }}
@@ -527,7 +527,7 @@ jobs:
           fi
 
       - name: Checkout dataset - external
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         if: steps.set_dataset_config_vars.outputs.is_external == 'true'
         with:
           repository: ${{ env.DATASET }}
@@ -695,7 +695,7 @@ jobs:
           echo "::set-output name=success_status::$success_status"
 
       - name: Checkout git repository 🕝
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python 3.7 🐍
         uses: actions/setup-python@dc73133d4da04e56a135ae2246682783cc7c7cb6  # v2.2.2
@@ -752,7 +752,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Download report from last on-schedule regression test
         run: |
