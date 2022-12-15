@@ -108,7 +108,7 @@ jobs:
 
     - name: Set up Python ${{ env.DEFAULT_PYTHON_VERSION }} 🐍
       if: needs.changes.outputs.backend == 'true'
-      uses: actions/setup-python@c4e89fac7e8767b327bbad6cb4d859eda999cf08
+      uses: actions/setup-python@2c3dd9e7e29afd70cc0950079bde6c979d1f69f9
       with:
         python-version: ${{ env.DEFAULT_PYTHON_VERSION }}
 
@@ -246,7 +246,7 @@ jobs:
 
     - name: Set up Python ${{ matrix.python-version }} 🐍
       if: needs.changes.outputs.backend == 'true'
-      uses: actions/setup-python@c4e89fac7e8767b327bbad6cb4d859eda999cf08
+      uses: actions/setup-python@2c3dd9e7e29afd70cc0950079bde6c979d1f69f9
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -364,7 +364,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Python 3.9 🐍
-        uses: actions/setup-python@c4e89fac7e8767b327bbad6cb4d859eda999cf08
+        uses: actions/setup-python@2c3dd9e7e29afd70cc0950079bde6c979d1f69f9
         with:
           python-version: 3.9
 
@@ -393,7 +393,7 @@ jobs:
 
       - name: Upload reports to codeclimate
         if: needs.changes.outputs.backend == 'true'
-        uses: paambaati/codeclimate-action@84cea27117a473d605400ca3a97fcef7e433e2d6
+        uses: paambaati/codeclimate-action@ac3f177ece9928d220a8bd1c2f1957926fd3b67e
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_REPORTER_ID }}
         with:
@@ -460,7 +460,7 @@ jobs:
 
     - name: Set up Python ${{ env.DEFAULT_PYTHON_VERSION }} 🐍
       if: needs.changes.outputs.backend == 'true'
-      uses: actions/setup-python@c4e89fac7e8767b327bbad6cb4d859eda999cf08
+      uses: actions/setup-python@2c3dd9e7e29afd70cc0950079bde6c979d1f69f9
       with:
         python-version: ${{ env.DEFAULT_PYTHON_VERSION }}
 
@@ -795,7 +795,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Set up Python 3.9 🐍
-      uses: actions/setup-python@c4e89fac7e8767b327bbad6cb4d859eda999cf08
+      uses: actions/setup-python@2c3dd9e7e29afd70cc0950079bde6c979d1f69f9
       with:
         python-version: 3.9
 
