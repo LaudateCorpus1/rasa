@@ -3206,17 +3206,16 @@ vision = ["Pillow"]
 
 [[package]]
 name = "twilio"
-version = "6.50.1"
+version = "7.16.0"
 description = "Twilio API client and TwiML generator"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.6.0"
 
 [package.dependencies]
-PyJWT = ">=1.4.2"
+PyJWT = ">=2.0.0,<3.0.0"
 pytz = "*"
-requests = {version = ">=2.0.0", markers = "python_version >= \"3.0\""}
-six = "*"
+requests = ">=2.0.0"
 
 [[package]]
 name = "typed-ast"
@@ -3533,7 +3532,7 @@ transformers = ["transformers", "sentencepiece"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7,<3.10"
-content-hash = "c2daa40e66e75a9e603fd47b70f6bb9680ba39e6b2490710361cb78b3ffb43d9"
+content-hash = "65c6fc8fdf1db7d9c0e65e1c94ec33ab9d49f94b12014619cd084f6f57e3f930"
 
 [metadata.files]
 absl-py = [
@@ -6016,7 +6015,8 @@ transformers = [
     {file = "transformers-4.13.0.tar.gz", hash = "sha256:8afc1059cc4ac1b99239c4406b6aea90e8ef7a35c2ebfaa1a4a2f9e2bd0ec5e6"},
 ]
 twilio = [
-    {file = "twilio-6.50.1.tar.gz", hash = "sha256:dd8371c9b4ea422d6de7526b63b587da82e8488f2b3f6b1258d2cad6e4006a65"},
+    {file = "twilio-7.16.0-py2.py3-none-any.whl", hash = "sha256:3c02ed1855629e3b567b613c03dfad2aade913f21897d21cd0efe6e48f06ddcf"},
+    {file = "twilio-7.16.0.tar.gz", hash = "sha256:8d6fb07d42235ec60d6256c0f438f6274f601d688e550d25124a0067c4daf75c"},
 ]
 typed-ast = [
     {file = "typed_ast-1.5.4-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:669dd0c4167f6f2cd9f57041e03c3c2ebf9063d0757dc89f79ba1daa2bfca9d4"},
